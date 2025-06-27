@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solutions | Abox.in Solutions</title>
+  <title>Solutions | YugaYatra Solutions</title>
   <link rel="icon" href="https://img.icons8.com/ios-filled/50/4caf50/shop.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,11 +12,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navbar (reuse from index.html) -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top py-3">
     <div class="container">
       <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
         <img src="https://img.icons8.com/ios-filled/50/4caf50/shop.png" alt="Logo" width="36" class="me-2">
-        Abox.in
+        YugaYatra
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,14 +26,18 @@
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
           <li class="nav-item"><a class="nav-link active" href="solutions.html">Solutions</a></li>
           <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
+
+  <!-- Solutions Main Section -->
   <section class="solutions-section py-5 bg-light">
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
@@ -40,90 +45,86 @@
         <p class="text-muted">Empowering retail and enterprise businesses with cutting-edge technology</p>
       </div>
       <div class="row g-4">
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-md-6 col-lg-4" id="retail" data-aos="fade-up" data-aos-delay="100">
           <div class="card h-100 shadow-sm border-0 p-4">
-            <div class="mb-3"><i class="fa fa-database fa-2x text-gold"></i></div>
-            <h5 class="fw-bold mb-2">Content Management</h5>
-            <p>Flexible CMS for websites, eCommerce, and enterprise portals.</p>
+            <div class="mb-3"><i class="fa fa-store fa-2x text-gold"></i></div>
+            <h5 class="fw-bold mb-2">Retail Automation</h5>
+            <p>Streamline store operations, inventory, and customer engagement with our advanced retail automation platforms.</p>
+            <img src="https://images.unsplash.com/photo-1515169067865-5387e0e1f6c0?auto=format&fit=crop&w=400&q=80" alt="Retail Automation" class="img-fluid rounded shadow-sm mt-3">
           </div>
         </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-md-6 col-lg-4" id="analytics" data-aos="fade-up" data-aos-delay="200">
           <div class="card h-100 shadow-sm border-0 p-4">
-            <div class="mb-3"><i class="fa fa-sms fa-2x text-gold"></i></div>
-            <h5 class="fw-bold mb-2">Bulk SMS</h5>
-            <p>Enterprise-grade SMS and messaging solutions for marketing and alerts.</p>
+            <div class="mb-3"><i class="fa fa-chart-line fa-2x text-gold"></i></div>
+            <h5 class="fw-bold mb-2">Analytics & Insights</h5>
+            <p>Unlock actionable business intelligence with real-time analytics, dashboards, and predictive insights.</p>
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Analytics" class="img-fluid rounded shadow-sm mt-3">
           </div>
         </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-md-6 col-lg-4" id="cloud" data-aos="fade-up" data-aos-delay="300">
           <div class="card h-100 shadow-sm border-0 p-4">
-            <div class="mb-3"><i class="fa fa-database fa-2x text-gold"></i></div>
-            <h5 class="fw-bold mb-2">Data Collection</h5>
-            <p>Custom data collection platforms for research, surveys, and analytics.</p>
+            <div class="mb-3"><i class="fa fa-cloud fa-2x text-gold"></i></div>
+            <h5 class="fw-bold mb-2">Cloud Services</h5>
+            <p>Secure, scalable, and cost-effective cloud solutions for retail and enterprise transformation.</p>
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Cloud Services" class="img-fluid rounded shadow-sm mt-3">
           </div>
         </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+        <div class="col-md-6 col-lg-4" id="integration" data-aos="fade-up" data-aos-delay="400">
           <div class="card h-100 shadow-sm border-0 p-4">
-            <div class="mb-3"><i class="fa fa-paint-brush fa-2x text-gold"></i></div>
-            <h5 class="fw-bold mb-2">Stationery Design</h5>
-            <p>Professional design for business cards, brochures, and all stationery needs.</p>
+            <div class="mb-3"><i class="fa fa-network-wired fa-2x text-gold"></i></div>
+            <h5 class="fw-bold mb-2">System Integration</h5>
+            <p>Seamlessly connect your business systems, applications, and data for unified operations.</p>
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="System Integration" class="img-fluid rounded shadow-sm mt-3">
           </div>
         </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-md-6 col-lg-4" id="ai" data-aos="fade-up" data-aos-delay="500">
           <div class="card h-100 shadow-sm border-0 p-4">
-            <div class="mb-3"><i class="fa fa-mobile-alt fa-2x text-gold"></i></div>
-            <h5 class="fw-bold mb-2">Mobile API</h5>
-            <p>Robust APIs for mobile app integration and automation.</p>
+            <div class="mb-3"><i class="fa fa-robot fa-2x text-gold"></i></div>
+            <h5 class="fw-bold mb-2">AI & Machine Learning</h5>
+            <p>Leverage artificial intelligence for smarter recommendations, automation, and customer experiences.</p>
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="AI & ML" class="img-fluid rounded shadow-sm mt-3">
           </div>
         </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
+        <div class="col-md-6 col-lg-4" id="security" data-aos="fade-up" data-aos-delay="600">
           <div class="card h-100 shadow-sm border-0 p-4">
-            <div class="mb-3"><i class="fa fa-home fa-2x text-gold"></i></div>
-            <h5 class="fw-bold mb-2">Real Estate Web</h5>
-            <p>Custom web solutions for real estate listings, management, and marketing.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="card h-100 shadow-sm border-0 p-4">
-            <div class="mb-3"><i class="fa fa-apple fa-2x text-gold"></i></div>
-            <h5 class="fw-bold mb-2">iOS Mobile App</h5>
-            <p>Native iOS app development for business and consumer needs.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="450">
-          <div class="card h-100 shadow-sm border-0 p-4">
-            <div class="mb-3"><i class="fa fa-database fa-2x text-gold"></i></div>
-            <h5 class="fw-bold mb-2">Database Management</h5>
-            <p>Enterprise database solutions for secure, scalable data management.</p>
+            <div class="mb-3"><i class="fa fa-shield-alt fa-2x text-gold"></i></div>
+            <h5 class="fw-bold mb-2">Cybersecurity</h5>
+            <p>Protect your business with advanced security solutions, compliance, and risk management.</p>
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Cybersecurity" class="img-fluid rounded shadow-sm mt-3">
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Footer (reuse from index.html) -->
   <footer class="footer-section py-5 mt-5">
     <div class="container">
       <div class="row g-4">
         <div class="col-md-6 col-lg-3">
           <h6 class="fw-bold mb-3">About Us</h6>
-          <p class="text-muted small">Abox.in Solutions is dedicated to empowering businesses with innovative technology and exceptional service.</p>
+          <p class="text-muted small">YugaYatra Solutions is dedicated to empowering businesses with innovative technology and exceptional service.</p>
         </div>
         <div class="col-md-6 col-lg-3">
           <h6 class="fw-bold mb-3">Quick Links</h6>
           <ul class="list-unstyled">
             <li><a href="index.html" class="footer-link">Home</a></li>
             <li><a href="about.html" class="footer-link">About Us</a></li>
-            <li><a href="services.html" class="footer-link">Services</a></li>
             <li><a href="solutions.html" class="footer-link">Solutions</a></li>
             <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+            <li><a href="careers.html" class="footer-link">Careers</a></li>
             <li><a href="contact.html" class="footer-link">Contact</a></li>
           </ul>
         </div>
         <div class="col-md-6 col-lg-3">
           <h6 class="fw-bold mb-3">Solutions</h6>
           <ul class="list-unstyled">
-            <li><a href="solutions.html#content" class="footer-link">Content Management</a></li>
-            <li><a href="solutions.html#sms" class="footer-link">Bulk SMS</a></li>
-            <li><a href="solutions.html#data" class="footer-link">Data Collection</a></li>
-            <li><a href="solutions.html#stationery" class="footer-link">Stationery Design</a></li>
+            <li><a href="solutions.html#retail" class="footer-link">Retail Automation</a></li>
+            <li><a href="solutions.html#analytics" class="footer-link">Analytics & Insights</a></li>
+            <li><a href="solutions.html#cloud" class="footer-link">Cloud Services</a></li>
+            <li><a href="solutions.html#integration" class="footer-link">System Integration</a></li>
           </ul>
         </div>
         <div class="col-md-6 col-lg-3">
@@ -134,11 +135,12 @@
             <a href="#" class="text-gold fs-5"><i class="fab fa-linkedin-in"></i></a>
             <a href="#" class="text-gold fs-5"><i class="fab fa-instagram"></i></a>
           </div>
-          <p class="text-muted small mb-0">&copy; 2024 Abox.in Solutions. All rights reserved.</p>
+          <p class="text-muted small mb-0">&copy; 2024 YugaYatra Solutions. All rights reserved.</p>
         </div>
       </div>
     </div>
   </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>

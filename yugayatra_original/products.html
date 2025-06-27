@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products | Abox.in Solutions</title>
+  <title>Products | YugaYatra Solutions</title>
   <link rel="icon" href="https://img.icons8.com/ios-filled/50/4caf50/shop.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,36 +12,51 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top py-3">
+  <!-- Navbar (improved) -->
+  <nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top py-3">
     <div class="container">
       <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
-        <img src="https://img.icons8.com/ios-filled/50/4caf50/shop.png" alt="Logo" width="36" class="me-2">
-        Abox.in
+        <i class="fa fa-cubes me-2"></i> YugaYatra
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions</a></li>
-          <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <ul class="navbar-nav mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-home"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html"><i class="fa fa-users"></i> About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="solutions.html"><i class="fa fa-lightbulb"></i> Solutions</a></li>
+          <li class="nav-item"><a class="nav-link active" href="products.html"><i class="fa fa-box"></i> Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html"><i class="fa fa-handshake"></i> Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html"><i class="fa fa-blog"></i> Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="careers.html"><i class="fa fa-briefcase"></i> Careers</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
         </ul>
+        <a href="contact.html" class="btn nav-cta ms-lg-3 d-none d-lg-inline-flex"><i class="fa fa-paper-plane me-2"></i>Request Demo</a>
       </div>
     </div>
   </nav>
+
+  <!-- Hero Banner -->
+  <section class="products-hero-section d-flex align-items-center justify-content-center text-center position-relative">
+    <div class="container position-relative py-5">
+      <h1 class="display-5 fw-bold mb-3" data-aos="fade-up">Our Products</h1>
+      <p class="lead mb-0" data-aos="fade-up" data-aos-delay="100">Powerful, scalable, and innovative solutions for modern retail and enterprise.</p>
+    </div>
+  </section>
+  <div class="section-divider"></div>
+
+  <!-- Product Categories & Grid -->
   <section class="products-list-section py-5">
     <div class="container">
       <div class="row mb-4">
         <div class="col text-center">
-          <h2 class="fw-bold mb-3 section-title" data-aos="fade-up">Our Products</h2>
-          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Powerful, scalable, and innovative solutions for modern retail and enterprise.</p>
+          <h2 class="fw-bold mb-3 section-title" data-aos="fade-up">Explore Our Product Suite</h2>
+          <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">From POS systems to advanced analytics, we deliver the tools you need to succeed.</p>
         </div>
       </div>
       <div class="row g-4">
+        <!-- Product Card 1 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
           <div class="card h-100 shadow-sm border-0 p-3 text-center">
             <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" class="card-img-top rounded mb-3" alt="POS System">
@@ -49,9 +64,11 @@
               <div class="mb-2"><i class="fa fa-cash-register fa-lg text-gold"></i></div>
               <h5 class="fw-bold mb-2">SmartPOS Suite</h5>
               <p class="text-muted mb-3">Next-gen Point-of-Sale platform for seamless transactions, inventory, and customer management.</p>
+              <a href="#" class="btn btn-gold"><i class="fa fa-arrow-right me-1"></i>Learn More</a>
             </div>
           </div>
         </div>
+        <!-- Product Card 2 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
           <div class="card h-100 shadow-sm border-0 p-3 text-center">
             <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" class="card-img-top rounded mb-3" alt="Inventory Management">
@@ -59,9 +76,11 @@
               <div class="mb-2"><i class="fa fa-warehouse fa-lg text-gold"></i></div>
               <h5 class="fw-bold mb-2">Inventory360</h5>
               <p class="text-muted mb-3">Real-time inventory tracking, automated reordering, and analytics for optimized stock levels.</p>
+              <a href="#" class="btn btn-gold"><i class="fa fa-arrow-right me-1"></i>Learn More</a>
             </div>
           </div>
         </div>
+        <!-- Product Card 3 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
           <div class="card h-100 shadow-sm border-0 p-3 text-center">
             <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" class="card-img-top rounded mb-3" alt="Analytics">
@@ -69,9 +88,11 @@
               <div class="mb-2"><i class="fa fa-chart-bar fa-lg text-gold"></i></div>
               <h5 class="fw-bold mb-2">InsightPro Analytics</h5>
               <p class="text-muted mb-3">Business intelligence dashboards and predictive analytics for data-driven decisions.</p>
+              <a href="#" class="btn btn-gold"><i class="fa fa-arrow-right me-1"></i>Learn More</a>
             </div>
           </div>
         </div>
+        <!-- Product Card 4 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
           <div class="card h-100 shadow-sm border-0 p-3 text-center">
             <img src="https://images.unsplash.com/photo-1515169067865-5387e0e1f6c0?auto=format&fit=crop&w=400&q=80" class="card-img-top rounded mb-3" alt="Cloud Solutions">
@@ -79,9 +100,11 @@
               <div class="mb-2"><i class="fa fa-cloud fa-lg text-gold"></i></div>
               <h5 class="fw-bold mb-2">CloudConnect</h5>
               <p class="text-muted mb-3">Secure, scalable cloud infrastructure and SaaS solutions for modern businesses.</p>
+              <a href="#" class="btn btn-gold"><i class="fa fa-arrow-right me-1"></i>Learn More</a>
             </div>
           </div>
         </div>
+        <!-- Product Card 5 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
           <div class="card h-100 shadow-sm border-0 p-3 text-center">
             <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" class="card-img-top rounded mb-3" alt="Mobile Apps">
@@ -89,9 +112,11 @@
               <div class="mb-2"><i class="fa fa-mobile-alt fa-lg text-gold"></i></div>
               <h5 class="fw-bold mb-2">RetailMobile</h5>
               <p class="text-muted mb-3">Mobile apps for staff and customers: inventory, sales, loyalty, and more on the go.</p>
+              <a href="#" class="btn btn-gold"><i class="fa fa-arrow-right me-1"></i>Learn More</a>
             </div>
           </div>
         </div>
+        <!-- Product Card 6 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
           <div class="card h-100 shadow-sm border-0 p-3 text-center">
             <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" class="card-img-top rounded mb-3" alt="Integration API">
@@ -99,37 +124,42 @@
               <div class="mb-2"><i class="fa fa-plug fa-lg text-gold"></i></div>
               <h5 class="fw-bold mb-2">API Integrator</h5>
               <p class="text-muted mb-3">Robust APIs and connectors for seamless integration with ERP, CRM, and third-party systems.</p>
+              <a href="#" class="btn btn-gold"><i class="fa fa-arrow-right me-1"></i>Learn More</a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Footer (reuse from index.html) -->
   <footer class="footer-section py-5 mt-5">
     <div class="container">
       <div class="row g-4">
         <div class="col-md-6 col-lg-3">
           <h6 class="fw-bold mb-3">About Us</h6>
-          <p class="text-muted small">Abox.in Solutions is dedicated to empowering businesses with innovative technology and exceptional service.</p>
+          <p class="text-muted small">YugaYatra Solutions is dedicated to empowering businesses with innovative technology and exceptional service.</p>
         </div>
         <div class="col-md-6 col-lg-3">
           <h6 class="fw-bold mb-3">Quick Links</h6>
           <ul class="list-unstyled">
             <li><a href="index.html" class="footer-link">Home</a></li>
             <li><a href="about.html" class="footer-link">About Us</a></li>
-            <li><a href="services.html" class="footer-link">Services</a></li>
             <li><a href="solutions.html" class="footer-link">Solutions</a></li>
             <li><a href="products.html" class="footer-link">Products</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="blog.html" class="footer-link">Blog</a></li>
+            <li><a href="careers.html" class="footer-link">Careers</a></li>
             <li><a href="contact.html" class="footer-link">Contact</a></li>
           </ul>
         </div>
         <div class="col-md-6 col-lg-3">
           <h6 class="fw-bold mb-3">Solutions</h6>
           <ul class="list-unstyled">
-            <li><a href="solutions.html#content" class="footer-link">Content Management</a></li>
-            <li><a href="solutions.html#sms" class="footer-link">Bulk SMS</a></li>
-            <li><a href="solutions.html#data" class="footer-link">Data Collection</a></li>
-            <li><a href="solutions.html#stationery" class="footer-link">Stationery Design</a></li>
+            <li><a href="solutions.html#retail" class="footer-link">Retail Automation</a></li>
+            <li><a href="solutions.html#analytics" class="footer-link">Analytics & Insights</a></li>
+            <li><a href="solutions.html#cloud" class="footer-link">Cloud Services</a></li>
+            <li><a href="solutions.html#integration" class="footer-link">System Integration</a></li>
           </ul>
         </div>
         <div class="col-md-6 col-lg-3">
@@ -140,11 +170,12 @@
             <a href="#" class="text-gold fs-5"><i class="fab fa-linkedin-in"></i></a>
             <a href="#" class="text-gold fs-5"><i class="fab fa-instagram"></i></a>
           </div>
-          <p class="text-muted small mb-0">&copy; 2024 Abox.in Solutions. All rights reserved.</p>
+          <p class="text-muted small mb-0">&copy; 2024 YugaYatra Solutions. All rights reserved.</p>
         </div>
       </div>
     </div>
   </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
