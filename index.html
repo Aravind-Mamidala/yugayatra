@@ -72,6 +72,9 @@
     closeIcon.style.display = 'inline-block';
     togglerIcon.style.display = 'none';
   }
+  // Make these functions globally accessible
+  window.closeMenu = closeMenu;
+  window.openMenu = openMenu;
   hamburgerBtn.addEventListener('click', function(e) {
     if (navbarNav.classList.contains('show')) {
       closeMenu();

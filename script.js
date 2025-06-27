@@ -6,14 +6,17 @@ document.querySelectorAll('.nav-link').forEach(link => {
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
+        // Use getBoundingClientRect for robust scroll
+        const yOffset = -70;
+        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({
-          top: target.offsetTop - 70,
+          top: y,
           behavior: 'smooth'
         });
         // Collapse/hide navbar on mobile after click
         if (window.innerWidth <= 991) {
           if (typeof closeMenu === 'function') {
-            closeMenu();
+            setTimeout(closeMenu, 350); // close after scroll starts
           } else {
             // fallback: hide Bootstrap collapse if present
             const navbarCollapse = document.querySelector('.navbar-collapse');
