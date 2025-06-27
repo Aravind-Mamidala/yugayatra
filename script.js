@@ -3,20 +3,11 @@ document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', function(e) {
     const href = this.getAttribute('href');
     if (href && href.startsWith('#')) {
-      const id = href.slice(1);
-      const target = document.getElementById(id);
-      if (target) {
-        e.preventDefault();
-        // On mobile, close hamburger menu first
-        if (window.innerWidth <= 991) {
-          if (typeof closeMenu === 'function') closeMenu();
-          setTimeout(() => {
-            target.scrollIntoView({ behavior: 'smooth' });
-          }, 350);
-        } else {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
+      // Close hamburger menu on mobile
+      if (window.innerWidth <= 991 && typeof closeMenu === 'function') {
+        closeMenu();
       }
+      // Let browser handle anchor navigation
     }
   });
 });

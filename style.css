@@ -1160,4 +1160,9 @@ section {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
   }
+}
+
+/* Ensure anchor targets are not hidden behind navbar */
+section[id] {
+  scroll-margin-top: 90px;
 } 
