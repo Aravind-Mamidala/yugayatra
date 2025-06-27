@@ -3,27 +3,18 @@ document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', function(e) {
     const href = this.getAttribute('href');
     if (href && href.startsWith('#')) {
-      const target = document.querySelector(href);
+      const id = href.slice(1);
+      const target = document.getElementById(id);
       if (target) {
         e.preventDefault();
-        // Use getBoundingClientRect for robust scroll
-        const yOffset = -70;
-        const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({
-          top: y,
-          behavior: 'smooth'
-        });
-        // Collapse/hide navbar on mobile after click
+        // On mobile, close hamburger menu first
         if (window.innerWidth <= 991) {
-          if (typeof closeMenu === 'function') {
-            setTimeout(closeMenu, 350); // close after scroll starts
-          } else {
-            // fallback: hide Bootstrap collapse if present
-            const navbarCollapse = document.querySelector('.navbar-collapse');
-            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-              new bootstrap.Collapse(navbarCollapse).toggle();
-            }
-          }
+          if (typeof closeMenu === 'function') closeMenu();
+          setTimeout(() => {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }, 350);
+        } else {
+          target.scrollIntoView({ behavior: 'smooth' });
         }
       }
     }
