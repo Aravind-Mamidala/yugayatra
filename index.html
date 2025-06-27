@@ -53,60 +53,70 @@
   </nav>
 
   <script>
-  // Hamburger menu close and overlay logic
-  const hamburgerBtn = document.getElementById('hamburgerBtn');
-  const navbarNav = document.getElementById('navbarNav');
-  const navbarOverlay = document.getElementById('navbarOverlay');
-  const closeIcon = hamburgerBtn.querySelector('.navbar-close-icon');
-  const togglerIcon = hamburgerBtn.querySelector('.navbar-toggler-icon');
-
-  function closeMenu() {
-    navbarNav.classList.remove('show');
-    navbarOverlay.style.display = 'none';
-    closeIcon.style.display = 'none';
-    togglerIcon.style.display = '';
-  }
-  function openMenu() {
-    navbarNav.classList.add('show');
-    navbarOverlay.style.display = 'block';
-    closeIcon.style.display = 'inline-block';
-    togglerIcon.style.display = 'none';
-  }
-  // Make these functions globally accessible
-  window.closeMenu = closeMenu;
-  window.openMenu = openMenu;
-  hamburgerBtn.addEventListener('click', function(e) {
-    if (navbarNav.classList.contains('show')) {
-      closeMenu();
-    } else {
-      openMenu();
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navbarNav = document.getElementById('navbarNav');
+    const navbarOverlay = document.getElementById('navbarOverlay');
+    const closeIcon = hamburgerBtn.querySelector('.navbar-close-icon');
+    const togglerIcon = hamburgerBtn.querySelector('.navbar-toggler-icon');
+  
+    function closeMenu() {
+      navbarNav.classList.remove('show');
+      navbarOverlay.style.display = 'none';
+      closeIcon.style.display = 'none';
+      togglerIcon.style.display = '';
     }
-    e.stopPropagation();
-  });
-  closeIcon.addEventListener('click', function(e) {
-    closeMenu();
-    e.stopPropagation();
-  });
-  navbarOverlay.addEventListener('click', closeMenu);
-  window.addEventListener('resize', function() {
-    if (window.innerWidth > 991) {
-      closeMenu();
+  
+    function openMenu() {
+      navbarNav.classList.add('show');
+      navbarOverlay.style.display = 'block';
+      closeIcon.style.display = 'inline-block';
+      togglerIcon.style.display = 'none';
     }
-  });
-  </script>
-  <script>
-    // Fix for anchor links not working in mobile view after clicking nav link
-    document.querySelectorAll('.nav-link').forEach(link => {
+  
+    hamburgerBtn.addEventListener('click', function (e) {
+      if (navbarNav.classList.contains('show')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+      e.stopPropagation();
+    });
+  
+    closeIcon.addEventListener('click', function (e) {
+      closeMenu();
+      e.stopPropagation();
+    });
+  
+    navbarOverlay.addEventListener('click', closeMenu);
+  
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 991) {
+        closeMenu();
+      }
+    });
+  
+    // Smooth scroll and close menu on nav link click
+    document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
       link.addEventListener('click', function (e) {
-        // If menu is open (mobile view), close after a short delay
-        if (navbarNav.classList.contains('show')) {
-          setTimeout(() => {
-            closeMenu();
-          }, 100); // Small delay to allow anchor scroll
+        const targetID = this.getAttribute('href');
+        const targetElement = document.querySelector(targetID);
+  
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+  
+          // Close menu after scroll
+          if (navbarNav.classList.contains('show')) {
+            setTimeout(() => {
+              closeMenu();
+            }, 300);
+          }
         }
       });
     });
   </script>
+  
+  
   
 
   <!-- Hero Section: more vertical spacing, stat boxes hover effect -->

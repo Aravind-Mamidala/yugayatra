@@ -3,11 +3,14 @@ document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', function(e) {
     const href = this.getAttribute('href');
     if (href && href.startsWith('#')) {
-      // Close hamburger menu on mobile
       if (window.innerWidth <= 991 && typeof closeMenu === 'function') {
+        e.preventDefault();
         closeMenu();
+        setTimeout(() => {
+          window.location.hash = href;
+        }, 300);
       }
-      // Let browser handle anchor navigation
+      // On desktop, let browser handle anchor navigation
     }
   });
 });
