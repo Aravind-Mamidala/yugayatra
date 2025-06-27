@@ -10,10 +10,17 @@ document.querySelectorAll('.nav-link').forEach(link => {
           top: target.offsetTop - 70,
           behavior: 'smooth'
         });
-        // Collapse navbar on mobile after click
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-        if (navbarCollapse.classList.contains('show')) {
-          new bootstrap.Collapse(navbarCollapse).toggle();
+        // Collapse/hide navbar on mobile after click
+        if (window.innerWidth <= 991) {
+          if (typeof closeMenu === 'function') {
+            closeMenu();
+          } else {
+            // fallback: hide Bootstrap collapse if present
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+              new bootstrap.Collapse(navbarCollapse).toggle();
+            }
+          }
         }
       }
     }
